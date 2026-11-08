@@ -1,0 +1,178 @@
+/* layout.css — Grid da página, cabeçalho, HUD, rodapé e breakpoints */
+
+/* ==========================================================================
+   1. Cabeçalho (.topo)
+   ========================================================================== */
+.topo {
+  background-color: var(--cor-superficie);
+  border-bottom: 1px solid var(--cor-borda);
+  padding: var(--esp-3) var(--esp-4);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--esp-3);
+  position: relative;
+  z-index: 2;
+}
+
+.topo__marca {
+  font-family: var(--fonte-hud);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--cor-primaria);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.topo__nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2);
+}
+
+.topo__nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: var(--esp-1) var(--esp-3);
+  font-family: var(--fonte-hud);
+  font-size: var(--fs-sm);
+  color: var(--cor-texto);
+  border: 1px solid transparent;
+  border-radius: var(--raio-sm);
+  transition: background-color var(--dur-rapida) var(--easing),
+              border-color var(--dur-rapida) var(--easing),
+              color var(--dur-rapida) var(--easing);
+}
+
+.topo__nav a:hover,
+.topo__nav a:focus-visible {
+  background-color: var(--cor-superficie-2);
+  border-color: var(--cor-primaria);
+  color: var(--cor-primaria);
+}
+
+/* ==========================================================================
+   2. Barra de status da missão (.hud)
+   ========================================================================== */
+.hud {
+  width: 100%;
+  max-width: 84rem;
+  margin: var(--esp-3) auto 0;
+  padding: var(--esp-2) var(--esp-3);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--esp-2);
+  position: relative;
+  z-index: 1;
+}
+
+.hud__indicadores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-3);
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ==========================================================================
+   3. Conteúdo principal (.cena)
+   ========================================================================== */
+.cena {
+  width: 100%;
+  max-width: 84rem;
+  margin: 0 auto;
+  padding: var(--esp-3);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  position: relative;
+  z-index: 1;
+}
+
+.cena__principal {
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-md);
+  box-shadow: var(--sombra-painel);
+  padding: var(--esp-3);
+}
+
+.painel-inventario {
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-md);
+  box-shadow: var(--sombra-painel);
+  padding: var(--esp-3);
+  width: 100%;
+}
+
+/* ==========================================================================
+   4. Rodapé (.rodape)
+   ========================================================================== */
+.rodape {
+  width: 100%;
+  max-width: 84rem;
+  margin: 0 auto;
+  padding: var(--esp-2) var(--esp-3) var(--esp-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--esp-3);
+  color: var(--cor-texto-suave);
+  font-family: var(--fonte-hud);
+  font-size: var(--fs-sm);
+  position: relative;
+  z-index: 1;
+}
+
+.rodape p {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   5. Breakpoints Responsivos (Tablet e Desktop)
+   ========================================================================== */
+@media (min-width: 40em) {
+  .hud {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: var(--esp-3) var(--esp-4);
+  }
+
+  .cena {
+    padding: var(--esp-4);
+    gap: var(--esp-4);
+  }
+
+  .cena__principal,
+  .painel-inventario {
+    padding: var(--esp-4);
+  }
+
+  .opcoes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64em) {
+  .pagina--exploracao .cena {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(26rem, 1fr);
+    align-items: start;
+    gap: var(--esp-4);
+  }
+
+  .painel-inventario {
+    position: sticky;
+    top: var(--esp-3);
+  }
+}

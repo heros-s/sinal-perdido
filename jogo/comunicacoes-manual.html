@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comunicações (Manual) — Sinal Perdido</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="pagina pagina--exploracao pagina--comunicacoes">
+  <header class="topo">
+    <a class="topo__marca" href="index.html">Sinal Perdido</a>
+    <nav class="topo__nav" aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="instrucoes.html">Instruções</a></li>
+        <li><a href="laboratorio.html">Reiniciar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hud painel" aria-label="Status da missão">
+    <div class="hud__indicadores">
+      <div class="hud__bloco progresso progresso--3">
+        <span><img class="hud__icone" src="img/icones/progresso.jpg" alt="" width="28" height="28"> Progresso: Etapa 3 de 3</span>
+        <div class="progresso__barra" role="progressbar" aria-valuenow="3" aria-valuemin="1" aria-valuemax="3">
+          <span class="progresso__preenchimento"></span>
+        </div>
+      </div>
+      <div class="hud__bloco">
+        <span class="oxigenio oxigenio--perigo">
+          <img class="hud__icone" src="img/icones/oxigenio.jpg" alt="" width="28" height="28">
+          Oxigênio: 35%
+        </span>
+      </div>
+    </div>
+
+    <ul class="minimapa" aria-label="Mapa da estação">
+      <li class="minimapa__item minimapa__item--concluido">
+        <img class="minimapa__icone" src="img/icones/laboratorio-ic.jpg" alt="" width="20" height="20">
+        <span>Laboratório</span>
+      </li>
+      <li class="minimapa__linha" aria-hidden="true"></li>
+      <li class="minimapa__item minimapa__item--concluido">
+        <img class="minimapa__icone" src="img/icones/engenharia-ic.jpg" alt="" width="20" height="20">
+        <span>Engenharia</span>
+      </li>
+      <li class="minimapa__linha" aria-hidden="true"></li>
+      <li class="minimapa__item minimapa__item--atual" aria-current="page">
+        <img class="minimapa__icone" src="img/icones/comunicacoes-ic.jpg" alt="" width="20" height="20">
+        <span>Comunicações</span>
+      </li>
+    </ul>
+  </section>
+
+  <main class="cena">
+    <article class="cena__principal painel">
+      <h1>Módulo 3: Central de Comunicações</h1>
+      <img class="cena__imagem" src="img/cenas/comunicacoes.jpg" alt="Console de comunicações ligado e iluminado em ciano exibindo três frequências de rádio" width="1280" height="720">
+      <p class="cena__narrativa">
+        Com a Célula de Energia instalada, o painel principal acende. Três frequências pré-programadas aparecem na tela, e você consulta o <strong>Manual de Frequências</strong> antes de transmitir.
+      </p>
+      <p class="destaque-manual">
+        Consultando o Manual de Frequências: protocolo de resgate orbital ativo na frequência <strong>406,0 MHz</strong>.
+      </p>
+
+      <h2>O que você faz?</h2>
+      <ul class="opcoes">
+        <li><a class="btn" href="fim-sinal.html">Transmitir em 121,5 MHz</a></li>
+        <li><a class="btn" href="fim-sinal.html">Transmitir em 243,0 MHz</a></li>
+        <li><a class="btn btn--sucesso" href="vitoria.html">Transmitir em 406,0 MHz (Recomendado pelo Manual)</a></li>
+      </ul>
+    </article>
+
+    <aside class="painel-inventario painel">
+      <table class="inventario">
+        <caption>Inventário</caption>
+        <thead>
+          <tr>
+            <th scope="col">Ícone</th>
+            <th scope="col">Item</th>
+            <th scope="col">Status</th>
+            <th scope="col">Uso</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img class="inventario__icone" src="img/icones/cartao.jpg" alt="Cartão de Acesso" width="36" height="36"></td>
+            <td>Cartão de Acesso</td>
+            <td><span class="selo-status selo-status--coletado">Coletado</span></td>
+            <td><a class="btn btn--secundario" href="#examinar-cartao">Examinar</a></td>
+          </tr>
+          <tr>
+            <td><img class="inventario__icone" src="img/icones/celula.jpg" alt="Célula de Energia" width="36" height="36"></td>
+            <td>Célula de Energia</td>
+            <td><span class="selo-status selo-status--coletado">Coletado</span></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><img class="inventario__icone" src="img/icones/manual.jpg" alt="Manual de Frequências" width="36" height="36"></td>
+            <td>Manual de Frequências</td>
+            <td><span class="selo-status selo-status--coletado">Coletado</span></td>
+            <td><a class="btn btn--secundario" href="#examinar-manual">Examinar</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </aside>
+  </main>
+
+  <footer class="rodape">
+    <a class="btn btn--secundario" href="engenharia-manual.html">Voltar</a>
+  </footer>
+
+  <section id="examinar-cartao" class="modal" aria-label="Detalhes do Cartão de Acesso">
+    <div class="modal__caixa painel">
+      <h2>Cartão de Acesso</h2>
+      <img class="modal__imagem" src="img/icones/cartao.jpg" alt="Cartão magnético de credencial técnica" width="96" height="96">
+      <p>
+        Credencial magnética de nível N2 pertencente à equipe de manutenção da Kepler-7. Libera a trava eletrônica da porta da Engenharia.
+      </p>
+      <a class="btn btn--secundario" href="#">Fechar</a>
+    </div>
+  </section>
+
+  <section id="examinar-manual" class="modal" aria-label="Detalhes do Manual de Frequências">
+    <div class="modal__caixa painel">
+      <h2>Manual de Frequências</h2>
+      <img class="modal__imagem" src="img/icones/manual.jpg" alt="Manual técnico aberto com diagramas de rádio" width="96" height="96">
+      <p>
+        Protocolo oficial da Frota Orbital: as faixas de 121,5 MHz e 243,0 MHz foram desativadas. Em caso de evacuação, transmita exclusivamente no canal de satélite <strong>406,0 MHz</strong>.
+      </p>
+      <a class="btn btn--secundario" href="#">Fechar</a>
+    </div>
+  </section>
+</body>
+</html>

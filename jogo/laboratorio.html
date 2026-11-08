@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laboratório — Sinal Perdido</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="pagina pagina--exploracao pagina--laboratorio">
+  <header class="topo">
+    <a class="topo__marca" href="index.html">Sinal Perdido</a>
+    <nav class="topo__nav" aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="instrucoes.html">Instruções</a></li>
+        <li><a href="laboratorio.html">Reiniciar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hud painel" aria-label="Status da missão">
+    <div class="hud__indicadores">
+      <div class="hud__bloco progresso progresso--1">
+        <span><img class="hud__icone" src="img/icones/progresso.jpg" alt="" width="28" height="28"> Progresso: Etapa 1 de 3</span>
+        <div class="progresso__barra" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3">
+          <span class="progresso__preenchimento"></span>
+        </div>
+      </div>
+      <div class="hud__bloco">
+        <span class="oxigenio">
+          <img class="hud__icone" src="img/icones/oxigenio.jpg" alt="" width="28" height="28">
+          Oxigênio: 90%
+        </span>
+      </div>
+    </div>
+
+    <ul class="minimapa" aria-label="Mapa da estação">
+      <li class="minimapa__item minimapa__item--atual" aria-current="page">
+        <img class="minimapa__icone" src="img/icones/laboratorio-ic.jpg" alt="" width="20" height="20">
+        <span>Laboratório</span>
+      </li>
+      <li class="minimapa__linha" aria-hidden="true"></li>
+      <li class="minimapa__item minimapa__item--apagado">
+        <img class="minimapa__icone" src="img/icones/engenharia-ic.jpg" alt="" width="20" height="20">
+        <span>Engenharia</span>
+      </li>
+      <li class="minimapa__linha" aria-hidden="true"></li>
+      <li class="minimapa__item minimapa__item--apagado">
+        <img class="minimapa__icone" src="img/icones/comunicacoes-ic.jpg" alt="" width="20" height="20">
+        <span>Comunicações</span>
+      </li>
+    </ul>
+  </section>
+
+  <main class="cena">
+    <article class="cena__principal painel">
+      <h1>Módulo 1: Laboratório de Pesquisa</h1>
+      <img class="cena__imagem" src="img/cenas/laboratorio.jpg" alt="Laboratório da estação com bancadas reviradas, um cartão de acesso pendurado num jaleco e um contêiner brilhando em verde" width="1280" height="720">
+      <p class="cena__narrativa">
+        Luzes de emergência piscam sobre bancadas reviradas. Um cartão de acesso está preso no jaleco de alguém que saiu às pressas. No canto, um contêiner lacrado brilha em verde com o aviso "AMOSTRA K-7 — NÃO ABRIR".
+      </p>
+
+      <details>
+        <summary>Anotações do Dr. Ivo</summary>
+        <div class="details__conteudo">
+          <p>
+            "Se alguém ainda estiver na estação após a evacuação: descartamos as faixas antigas de aviação. O socorro orbital só escuta a frequência dos faróis modernos: <strong>quatro, zero, seis</strong>."
+          </p>
+        </div>
+      </details>
+
+      <h2>O que você faz?</h2>
+      <ul class="opcoes">
+        <li><a class="btn" href="laboratorio-cartao.html">Pegar o Cartão de Acesso</a></li>
+        <li><a class="btn" href="fim-contaminacao.html">Abrir o contêiner da amostra</a></li>
+        <li><a class="btn" href="engenharia-trancada.html">Seguir para a Engenharia</a></li>
+      </ul>
+    </article>
+
+    <aside class="painel-inventario painel">
+      <table class="inventario">
+        <caption>Inventário</caption>
+        <thead>
+          <tr>
+            <th scope="col">Ícone</th>
+            <th scope="col">Item</th>
+            <th scope="col">Status</th>
+            <th scope="col">Uso</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="inventario__item--apagado">
+            <td><img class="inventario__icone" src="img/icones/cartao.jpg" alt="Cartão de Acesso" width="36" height="36"></td>
+            <td>Cartão de Acesso</td>
+            <td><span class="selo-status selo-status--vazio">Não encontrado</span></td>
+            <td>—</td>
+          </tr>
+          <tr class="inventario__item--apagado">
+            <td><img class="inventario__icone" src="img/icones/celula.jpg" alt="Célula de Energia" width="36" height="36"></td>
+            <td>Célula de Energia</td>
+            <td><span class="selo-status selo-status--vazio">Não encontrado</span></td>
+            <td>—</td>
+          </tr>
+          <tr class="inventario__item--apagado">
+            <td><img class="inventario__icone" src="img/icones/manual.jpg" alt="Manual de Frequências" width="36" height="36"></td>
+            <td>Manual de Frequências</td>
+            <td><span class="selo-status selo-status--vazio">Não encontrado</span></td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </aside>
+  </main>
+
+  <footer class="rodape">
+    <a class="btn btn--secundario" href="instrucoes.html">Voltar</a>
+  </footer>
+</body>
+</html>

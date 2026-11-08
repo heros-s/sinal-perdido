@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instruções — Sinal Perdido</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="pagina pagina--instrucoes">
+  <header class="topo">
+    <a class="topo__marca" href="index.html">Sinal Perdido</a>
+    <nav class="topo__nav" aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="instrucoes.html" aria-current="page">Instruções</a></li>
+        <li><a href="laboratorio.html">Reiniciar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="cena">
+    <article class="cena__principal painel">
+      <h1>Instruções de Sobrevivência</h1>
+      <p class="cena__narrativa">
+        Na Estação Orbital Kepler-7, cada ação consome tempo e oxigênio. Seu objetivo final é chegar ao módulo de <strong>Comunicações</strong> com energia ativa e transmitir o sinal de resgate na frequência correta.
+      </p>
+
+      <h2>Objetivo e Regras</h2>
+      <ul class="lista-regras">
+        <li>Explore os três módulos da estação: <strong>Laboratório</strong>, <strong>Engenharia</strong> e <strong>Comunicações</strong>.</li>
+        <li>Colete o <strong>Cartão de Acesso</strong> para destravar a Engenharia e a <strong>Célula de Energia</strong> para ligar o console de Comunicações.</li>
+        <li>Procure pistas opcionais e documentos nos compartimentos interativos para descobrir a frequência exata de resgate.</li>
+        <li>Cuidado com decisões precipitadas: abrir contêineres biológicos ou transmitir na frequência errada leva à derrota.</li>
+      </ul>
+
+      <h2>Navegação e Botão Voltar</h2>
+      <ul class="lista-regras">
+        <li>Escolha sua ação clicando nos botões de decisão de cada cena.</li>
+        <li>Use o botão <strong>Examinar</strong> na tabela de inventário para inspecionar detalhes dos itens coletados.</li>
+        <li><strong>Botão Voltar:</strong> o sistema de backup da estação restaura exatamente o ponto anterior, desfazendo sua última escolha (um item recém-coletado volta ao local de origem e o oxigênio retorna ao nível daquela etapa).</li>
+        <li>No topo da página, você pode acessar <strong>Início</strong>, <strong>Instruções</strong> ou <strong>Reiniciar</strong> a missão a qualquer momento.</li>
+      </ul>
+
+      <h2>Legenda de Ícones</h2>
+      <ul class="legenda-icones">
+        <li class="legenda-icones__item">
+          <img class="legenda-icones__img" src="img/icones/cartao.jpg" alt="Ícone do Cartão de Acesso" width="40" height="40">
+          <span><strong>Cartão de Acesso:</strong> credencial que destrava a Engenharia.</span>
+        </li>
+        <li class="legenda-icones__item">
+          <img class="legenda-icones__img" src="img/icones/celula.jpg" alt="Ícone da Célula de Energia" width="40" height="40">
+          <span><strong>Célula de Energia:</strong> alimenta o painel de Comunicações.</span>
+        </li>
+        <li class="legenda-icones__item">
+          <img class="legenda-icones__img" src="img/icones/manual.jpg" alt="Ícone do Manual de Frequências" width="40" height="40">
+          <span><strong>Manual de Frequências:</strong> documento técnico com o protocolo de socorro.</span>
+        </li>
+        <li class="legenda-icones__item">
+          <img class="legenda-icones__img" src="img/icones/laboratorio-ic.jpg" alt="Ícone do módulo Laboratório" width="40" height="40">
+          <span><strong>Laboratório:</strong> etapa 1 da estação.</span>
+        </li>
+        <li class="legenda-icones__item">
+          <img class="legenda-icones__img" src="img/icones/engenharia-ic.jpg" alt="Ícone do módulo Engenharia" width="40" height="40">
+          <span><strong>Engenharia:</strong> etapa 2 da estação.</span>
+        </li>
+        <li class="legenda-icones__item">
+          <img class="legenda-icones__img" src="img/icones/comunicacoes-ic.jpg" alt="Ícone do módulo Comunicações" width="40" height="40">
+          <span><strong>Comunicações:</strong> etapa 3 da estação.</span>
+        </li>
+        <li class="legenda-icones__item">
+          <img class="legenda-icones__img" src="img/icones/oxigenio.jpg" alt="Ícone do medidor de oxigênio" width="40" height="40">
+          <span><strong>Oxigênio:</strong> reserva de ar respirável do traje.</span>
+        </li>
+        <li class="legenda-icones__item">
+          <img class="legenda-icones__img" src="img/icones/progresso.jpg" alt="Ícone de progresso da missão" width="40" height="40">
+          <span><strong>Progresso:</strong> avanço entre os três setores.</span>
+        </li>
+      </ul>
+
+      <h2>Pronta para começar?</h2>
+      <ul class="opcoes">
+        <li><a class="btn" href="laboratorio.html">Iniciar Jogo</a></li>
+      </ul>
+    </article>
+  </main>
+
+  <footer class="rodape">
+    <a class="btn btn--secundario" href="index.html">Voltar</a>
+  </footer>
+</body>
+</html>

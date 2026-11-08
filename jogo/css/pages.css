@@ -1,0 +1,111 @@
+/* pages.css — Ajustes específicos por cena, módulo, home e instruções */
+
+/* ==========================================================================
+   1. Página Inicial (.pagina--home)
+   ========================================================================== */
+.pagina--home .cena__principal {
+  max-width: 52rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pagina--home h1 {
+  font-size: var(--fs-titulo);
+  color: var(--cor-primaria);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ==========================================================================
+   2. Página de Instruções (.pagina--instrucoes)
+   ========================================================================== */
+.pagina--instrucoes .cena__principal {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.lista-regras {
+  list-style: disc;
+  padding-left: var(--esp-4);
+  margin-bottom: var(--esp-3);
+}
+
+.lista-regras li {
+  margin-bottom: var(--esp-2);
+}
+
+.legenda-icones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: var(--esp-3);
+  margin: var(--esp-3) 0 var(--esp-4);
+}
+
+.legenda-icones__item {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-3);
+  padding: var(--esp-2) var(--esp-3);
+  background-color: var(--cor-superficie-2);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-sm);
+}
+
+.legenda-icones__img {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--raio-sm);
+  object-fit: cover;
+  border: 1px solid var(--cor-borda);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   3. Variações de Módulos de Exploração
+   ========================================================================== */
+.pagina--porta-trancada .cena__principal {
+  border-color: var(--cor-perigo);
+}
+
+.alerta-acesso {
+  display: inline-block;
+  font-family: var(--fonte-hud);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--cor-perigo);
+  background-color: var(--cor-superficie-2);
+  border: 1px solid var(--cor-perigo);
+  border-radius: var(--raio-sm);
+  padding: var(--esp-1) var(--esp-3);
+  margin-bottom: var(--esp-3);
+  letter-spacing: 0.08em;
+}
+
+.destaque-manual {
+  background-color: var(--cor-superficie-2);
+  border-left: 4px solid var(--cor-sucesso);
+  padding: var(--esp-2) var(--esp-3);
+  border-radius: var(--raio-sm);
+  margin-bottom: var(--esp-3);
+  font-family: var(--fonte-hud);
+  font-size: var(--fs-sm);
+  color: var(--cor-sucesso);
+}
+
+/* ==========================================================================
+   4. Páginas de Conclusão (.pagina--conclusao)
+   ========================================================================== */
+.pagina--conclusao .cena__principal {
+  max-width: 52rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pagina--vitoria .cena__principal {
+  border-color: var(--cor-sucesso);
+}
+
+.pagina--contaminacao .cena__principal,
+.pagina--sinal-perdido .cena__principal {
+  border-color: var(--cor-perigo);
+}

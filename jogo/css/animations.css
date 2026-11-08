@@ -1,0 +1,225 @@
+/* animations.css — Keyframes, transições, view transitions e reduced-motion */
+
+/* ==========================================================================
+   1. Transição entre páginas (View Transitions)
+   ========================================================================== */
+@view-transition {
+  navigation: auto;
+}
+
+/* ==========================================================================
+   2. Fundo estrelado (body::before)
+   ========================================================================== */
+@keyframes estrelas {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-40px);
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -40px 0 0 0;
+  background-image:
+    radial-gradient(1.5px 1.5px at 15% 20%, rgba(230, 237, 247, 0.55) 50%, transparent 100%),
+    radial-gradient(1px 1px at 75% 35%, rgba(79, 209, 255, 0.5) 50%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 40% 70%, rgba(230, 237, 247, 0.4) 50%, transparent 100%),
+    radial-gradient(2px 2px at 85% 80%, rgba(79, 209, 255, 0.35) 50%, transparent 100%);
+  background-size: 260px 260px;
+  pointer-events: none;
+  z-index: 0;
+  animation: estrelas 24s linear infinite alternate;
+}
+
+/* ==========================================================================
+   3. Entrada de página e Modal
+   ========================================================================== */
+@keyframes entrar {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cena {
+  animation: entrar var(--dur-media) var(--easing) both;
+}
+
+@keyframes modal-entrar {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal:target .modal__caixa {
+  animation: modal-entrar var(--dur-media) var(--easing) both;
+}
+
+/* ==========================================================================
+   4. Coleta de item (.inventario__item--novo)
+   ========================================================================== */
+@keyframes item-novo-fundo {
+  0%,
+  100% {
+    background-color: var(--cor-superficie-2);
+  }
+  50% {
+    background-color: rgba(255, 179, 71, 0.25);
+  }
+}
+
+@keyframes icone-pop {
+  0% {
+    transform: scale(0.75);
+  }
+  60% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.inventario tbody tr.inventario__item--novo {
+  animation: item-novo-fundo var(--dur-lenta) var(--easing) 3;
+}
+
+.inventario__item--novo .inventario__icone {
+  animation: icone-pop var(--dur-lenta) var(--easing) both;
+  border-color: var(--cor-alerta);
+}
+
+/* ==========================================================================
+   5. Alertas e efeitos de cena
+   ========================================================================== */
+@keyframes pulso-oxigenio {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(248, 113, 113, 0);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(248, 113, 113, 0.55);
+  }
+}
+
+.oxigenio--alerta,
+.oxigenio--perigo {
+  animation: pulso-oxigenio 2s ease-in-out infinite;
+}
+
+@keyframes luz-emergencia {
+  0%,
+  100% {
+    box-shadow: var(--sombra-painel);
+  }
+  50% {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65), 0 0 18px rgba(255, 179, 71, 0.35);
+  }
+}
+
+.pagina--laboratorio .cena__principal {
+  animation: luz-emergencia 3s ease-in-out infinite;
+}
+
+@keyframes tremer-negado {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+
+.alerta-acesso {
+  animation: tremer-negado var(--dur-media) var(--easing) 3;
+}
+
+@keyframes selo-entrada {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.selo-final {
+  animation: selo-entrada var(--dur-lenta) var(--easing) both;
+}
+
+@keyframes brilho-vitoria {
+  0%,
+  100% {
+    box-shadow: 0 0 12px rgba(74, 222, 128, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(74, 222, 128, 0.65);
+  }
+}
+
+.pagina--vitoria .selo-final--vitoria {
+  animation: selo-entrada var(--dur-lenta) var(--easing) both,
+             brilho-vitoria 2.5s ease-in-out infinite;
+}
+
+@keyframes nevoa-contaminacao {
+  0%,
+  100% {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65), 0 0 16px rgba(74, 222, 128, 0.2);
+  }
+  50% {
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.75), 0 0 32px rgba(248, 113, 113, 0.45);
+  }
+}
+
+.pagina--contaminacao .cena__principal {
+  animation: nevoa-contaminacao 3s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   6. Acessibilidade (prefers-reduced-motion)
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  .oxigenio--alerta,
+  .oxigenio--perigo,
+  .pagina--laboratorio .cena__principal,
+  .alerta-acesso,
+  .pagina--vitoria .selo-final--vitoria,
+  .pagina--contaminacao .cena__principal,
+  .inventario tbody tr.inventario__item--novo,
+  .inventario__item--novo .inventario__icone {
+    animation: none;
+  }
+
+  .cena,
+  .modal:target .modal__caixa,
+  .selo-final {
+    animation-duration: var(--dur-rapida);
+  }
+
+  .btn,
+  .topo__nav a,
+  summary::after,
+  .progresso__preenchimento {
+    transition-duration: 0ms;
+  }
+}
