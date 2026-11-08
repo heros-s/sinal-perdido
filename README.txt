@@ -17,38 +17,39 @@ Você é a engenheira de manutenção da Estação Orbital Kepler-7. Ao desperta
 3. LISTA DE PÁGINAS (14 ARQUIVOS HTML)
 --------------------------------------
 01. `index.html` — Tela inicial com apresentação da história e acesso ao jogo e às instruções.
-02. `instrucoes.html` — Explicação do objetivo, regras, funcionamento do botão Voltar e legenda dos ícones.
-03. `laboratorio.html` — Módulo 1 (Progresso 1/3, Oxigênio 90%, Inventário vazio). Contém pista opcional e opções iniciais.
-04. `engenharia-trancada.html` — Porta da Engenharia bloqueada por falta do Cartão de Acesso (Progresso 1/3, Oxigênio 85%).
-05. `laboratorio-cartao.html` — Laboratório após coletar o Cartão de Acesso (Progresso 1/3, Oxigênio 80%, Inventário: Cartão).
-06. `engenharia.html` — Módulo 2 aberto com o Cartão (Progresso 2/3, Oxigênio 65%, Inventário: Cartão).
-07. `comunicacoes-sem-energia.html` — Módulo 3 apagado por falta da Célula de Energia (Progresso 2/3, Oxigênio 55%, Inventário: Cartão).
-08. `engenharia-celula.html` — Engenharia após retirar a Célula de Energia e liberar o armário com o Manual (Progresso 2/3, Oxigênio 55%, Inventário: Cartão, Célula).
-09. `engenharia-manual.html` — Engenharia após coletar também o Manual de Frequências (Progresso 2/3, Oxigênio 50%, Inventário: Cartão, Célula, Manual).
-10. `comunicacoes.html` — Módulo 3 energizado, com as três opções de frequência para transmissão (Progresso 3/3, Oxigênio 35%, Inventário: Cartão, Célula).
-11. `comunicacoes-manual.html` — Módulo 3 energizado e com destaque da frequência correta indicada pelo Manual (Progresso 3/3, Oxigênio 35%, Inventário: Cartão, Célula, Manual).
-12. `vitoria.html` — Tela de conclusão de vitória (transmissão em 406,0 MHz recebida pela equipe de resgate).
-13. `fim-contaminacao.html` — Tela de conclusão de derrota por abertura do contêiner da Amostra K-7 no Laboratório.
-14. `fim-sinal.html` — Tela de conclusão de derrota por transmissão em frequência desativada e esgotamento da bateria.
+02. `pages/instrucoes.html` — Explicação do objetivo, regras, funcionamento do botão Voltar e legenda dos ícones.
+03. `pages/laboratorio.html` — Módulo 1 (Progresso 1/3, Oxigênio 90%, Inventário vazio). Contém pista opcional e opções iniciais.
+04. `pages/engenharia-trancada.html` — Porta da Engenharia bloqueada por falta do Cartão de Acesso (Progresso 1/3, Oxigênio 85%).
+05. `pages/laboratorio-cartao.html` — Laboratório após coletar o Cartão de Acesso (Progresso 1/3, Oxigênio 80%, Inventário: Cartão).
+06. `pages/engenharia.html` — Módulo 2 aberto com o Cartão (Progresso 2/3, Oxigênio 65%, Inventário: Cartão).
+07. `pages/comunicacoes-sem-energia.html` — Módulo 3 apagado por falta da Célula de Energia (Progresso 2/3, Oxigênio 55%, Inventário: Cartão).
+08. `pages/engenharia-celula.html` — Engenharia após retirar a Célula de Energia e liberar o armário com o Manual (Progresso 2/3, Oxigênio 55%, Inventário: Cartão, Célula).
+09. `pages/engenharia-manual.html` — Engenharia após coletar também o Manual de Frequências (Progresso 2/3, Oxigênio 50%, Inventário: Cartão, Célula, Manual).
+10. `pages/comunicacoes.html` — Módulo 3 energizado, com as três opções de frequência para transmissão (Progresso 3/3, Oxigênio 35%, Inventário: Cartão, Célula).
+11. `pages/comunicacoes-manual.html` — Módulo 3 energizado e com destaque da frequência correta indicada pelo Manual (Progresso 3/3, Oxigênio 35%, Inventário: Cartão, Célula, Manual).
+12. `pages/vitoria.html` — Tela de conclusão de vitória (transmissão em 406,0 MHz recebida pela equipe de resgate).
+13. `pages/fim-contaminacao.html` — Tela de conclusão de derrota por abertura do contêiner da Amostra K-7 no Laboratório.
+14. `pages/fim-sinal.html` — Tela de conclusão de derrota por transmissão em frequência desativada e esgotamento da bateria.
 
 4. ESTRUTURA DE PASTAS
 ----------------------
-jogo/
+/
 ├── index.html
-├── instrucoes.html
-├── laboratorio.html
-├── laboratorio-cartao.html
-├── engenharia-trancada.html
-├── engenharia.html
-├── engenharia-celula.html
-├── engenharia-manual.html
-├── comunicacoes-sem-energia.html
-├── comunicacoes.html
-├── comunicacoes-manual.html
-├── vitoria.html
-├── fim-contaminacao.html
-├── fim-sinal.html
 ├── README.txt
+├── pages/
+│   ├── instrucoes.html
+│   ├── laboratorio.html
+│   ├── laboratorio-cartao.html
+│   ├── engenharia-trancada.html
+│   ├── engenharia.html
+│   ├── engenharia-celula.html
+│   ├── engenharia-manual.html
+│   ├── comunicacoes-sem-energia.html
+│   ├── comunicacoes.html
+│   ├── comunicacoes-manual.html
+│   ├── vitoria.html
+│   ├── fim-contaminacao.html
+│   └── fim-sinal.html
 ├── css/
 │   ├── base.css
 │   ├── layout.css

@@ -143,8 +143,6 @@
    ========================================================================== */
 @media (min-width: 40em) {
   .hud {
-    grid-template-columns: 1fr auto;
-    align-items: center;
     padding: var(--esp-3) var(--esp-4);
   }
 
@@ -160,6 +158,13 @@
 
   .opcoes {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 56em) {
+  .hud {
+    grid-template-columns: 1fr auto;
+    align-items: center;
   }
 }
 
